@@ -12,3 +12,6 @@ game_data_analysis.ipynb
 
 rule_defind.ipynb
 - apriori 알고리즘 / cosine_similarity
+
+seoul_data_gen.ipynb
+- 연관분석 데이터 생성
