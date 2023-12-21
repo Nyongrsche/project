@@ -1,0 +1,668 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>FC Seoul Online Shop</title>
+</head>
+<body>
+    <div class="global_top">
+        <h1 class = "logo">
+            <img src="{% static 'images/로고.PNG' %}" class="p160">
+            FC Seoul<br>
+            Online Shop
+        </h1>
+        <form class="id">
+            <label>ID</label>
+            <input type="text">
+            <label>PW</label>
+            <input type="password">
+            <input type="button" value="LOGIN">
+        </form>
+    </div>
+    <form id="checkbox-form" method="post" action="{% url 'basket' %}">
+        {% csrf_token %}
+        <h2 class="section-name">유니폼</h2>
+        <table class="product-section">
+            <tbody class="section">
+                <tr>
+                    <td>
+                        <!-- 홈 -->
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/홈.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    홈
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 99,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="홈">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/어웨이.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    어웨이
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 99,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="어웨이">
+                                </dt>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/아동유니폼.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    아동 유니폼
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 79,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="아동유니폼">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/마킹.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    마킹
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 17,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="마킹">
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 트레이닝 -->
+        <h2 class="section-name">트레이닝</h2>
+        <table class="product-section">
+            <tbody class="section">
+                <tr>
+                    <td>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/입장용트랙탑.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    입장용 트랙탑
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 109,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="입장용트랙탑">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/레인자켓.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    레인자켓
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 189,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="레인자켓">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/패딩수트상의.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    패딩수트 상의
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 159,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="패딩수트상의">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/선수단롱다운.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    선수단 롱다운
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 429,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="선수단롱다운">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/패딩베스트.jpeg' %}" class="p160" />
+                                </dt>
+                                <li class="product-name">
+                                    패딩 베스트
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 169,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="패딩베스트">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/이동복상의.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    이동복 상의
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 109,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="이동복상의">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/트레이닝상의.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    트레이닝 상의
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 99,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="트레이닝상의">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/바람막이피스테.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    바람막이 피스테
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 129,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="바람막이피스테">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/연습복긴팔.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    연습복 긴팔
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 59,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="연습복긴팔">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/연습복반팔.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    연습복 반팔
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 49,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="연습복반팔">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/폴로티긴팔.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    폴로티 긴팔
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 75,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="폴로티긴팔">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/폴로티반팔.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    폴로티 반팔
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 49,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="폴로티반팔">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/트레이닝하의.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    트레이닝 하의
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 70,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="트레이닝하의">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/연습복반바지.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    연습복 반바지
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 55,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="연습복반바지">
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 머플러 -->
+        <h2 class="section-name">머플러</h2>
+        <table class="product-section">
+            <tbody class="section">
+                <tr>
+                    <td>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/FC서울SoulofSeoul니트머플러.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    FC서울 SoulofSeoul니트머플러
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 23,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="FC서울SoulofSeoul니트머플러">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/FC서울브랜딩니트머플러.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    FC서울 브랜딩니트머플러
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 23,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="FC서울브랜딩니트머플러">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/FC서울WHITE니트머플러.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    FC서울 WHITE니트머플러
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 23,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="FC서울WHITE니트머플러">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/레트로전사머플러.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    레트로 전사머플러
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 21,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="레트로전사머플러">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">  
+                                    <img src="{% static 'images/40주년기념극세사머플러.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    40주년 기념극세사머플러
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 13,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="40주년기념극세사머플러">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/40주년기념머플러.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    40주년 기념머플러
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 23,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="40주년기념머플러">
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 악세서리 및 기타 -->
+        <h2 class="section-name">악세서리 및 기타</h2>
+        <table class="product-section">
+            <tbody class="section">
+                <tr>
+                    <td>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/선수단볼캡블랙.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    선수단 볼캡블랙
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 34,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="선수단볼캡블랙">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/선수단동계비니.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    선수단 동계비니
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 29,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="선수당동계비니">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/40주년백구.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    40주년 백구
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 16,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="40주년백구">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/선수단신발주머니.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    선수단 신발주머니
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 77,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="선수단신발주머니">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/FC서울포토레인보우.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    FC서울 포토레인보우
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 10,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="FC서울포토레인보우">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/유니폼뱃지.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    유니폼 뱃지
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 6,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="유니폼뱃지">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/엠블럼뱃지.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    엠블럼 뱃지
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 5,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="엠블럼뱃지">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/레터링뱃지.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    레터링 뱃지
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 5,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="레터링뱃지">
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 응원용품 -->
+        <h2 class="section-name">응원용품</h2>
+        <table class="product-section">
+            <tbody class="section">
+                <tr>
+                    <td>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/FC서울 벌룬.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    FC서울 벌룬
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 3,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="FC서울 벌룬">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-item">
+                            <ul>
+                                <li class="product-image">
+                                    <img src="{% static 'images/FC서울 응원깃발.jpeg' %}" class="p160" />
+                                </li>
+                                <li class="product-name">
+                                    FC서울 응원깃발
+                                </li>
+                                <li class="product-price">
+                                    <font color="#d12428"> 6,000원</font>
+                                </li>
+                                <li class="product-check">
+                                    <input type="checkbox" name="selected_items" value="FC서울 응원깃발">
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 하단 부분 -->
+        <div class="footer">
+            <div class="foot_link tmp">
+                <ul class="clearfix">
+                    <li>
+                        <a href="https://www.fcseoul.com" target="_blank">FC서울 홈페이지</a>
+                    </li>
+                    <li>
+                        <a href="https://www.fcseoul.com/fcshop/privacy">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="https://www.fcseoul.com/fcshop/terms">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="https://www.fcseoul.com/fcshop/faqList">고객센터</a>
+                    </li>
+                    <!-- ::after -->
+                </ul>
+            </div>
+            <div class="tmp info">
+                <ul>
+                    <li>
+                        대표자 : 김준혁, 한용준
+                        <!-- ::after -->
+                    </li>
+                    <li>
+                        Apriori Corporation
+                        <!-- ::after -->
+                    </li>
+                    <li>
+                        <address> 주소 : 서울시 마포구 와우산로 94</address>
+                    </li>
+                    <li>
+                        이메일 : hanyj98099@gmail.com
+                        <!-- ::after -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="fixedposition">
+            <button type="submit" id="next">담기 <br> & <br> 장바구니 이동</button>
+        </section>
+    </form>
+</body>
+
+</html>

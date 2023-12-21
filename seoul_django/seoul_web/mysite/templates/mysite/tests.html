@@ -1,0 +1,51 @@
+{% load static %}
+{% load humanize %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 화면</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="buy_top">
+        <h1 class="logo">
+            <img src="{% static 'images/로고.PNG' %}" class="p160">
+            FC Seoul<br>
+            Online Shop
+        </h1>
+    </div>
+    <div class='title'><h2>[선택한 상품]</h2></div>
+    <div class="chosen_items">
+        {% for item in selected_dict %} 
+        <ul>
+            <li><img src="{% static 'images/'|add:item.name|add:'.jpeg' %}"></li>
+            <li><h2 class="tem_name">{{item.name}}</h2></li>
+            <li><h2>{{ item.price|intcomma }} 원</h2></li>
+        </ul>
+        {% endfor %}
+    </div>
+    <div class="final_price">
+        <h1>결제 금액<br>{{total_price|intcomma}} 원</h1>
+    </div>
+    
+    <div class='title'><h2>[이런 상품도 추천해요!]</h2></div>
+    <div class="recommended_items">
+    {% for item2 in new_dict %}
+    <ul>
+        <li><img src="{% static 'images/'|add:item2.name|add:'.jpeg' %}"></li>
+        <li><h2 class="tem_name">{{item2.name}}</h2></li>
+        <li><h2>{{item2.price|intcomma}} 원</h2></li>
+    </ul>
+    {% endfor %}
+    </div>
+
+    <section class="buy_button">
+        <button>결제하기</button>
+    </section>
+</body>
+
+</html>
