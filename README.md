@@ -24,19 +24,19 @@
       - Apriori 알고리즘과 Cosine 유사도 분석을 활용한 콜드스타트 문제 해소
 ---
 seoul_django/seoul_web/style.css
-- 연관분석 프로젝트 웹 css
+- 2023_산업공학_졸업프로젝트 웹 css
 
 seoul_django/seoul_web/mysite/templates/mysite/index.html & basket.html & tests.html
-- 연관분석 프로젝트 웹 구현
+- 2023_산업공학_졸업프로젝트 웹 구현
 
 assignment3.py
 - 교내 데이터 베이스 수업 과제
 
 game_data_analysis.ipynb
-- 게임 데이터 시각화 및 feature importance 분석
+- 2022_게임_데이터분석
 
 rule_defind.ipynb
-- apriori 알고리즘 / cosine_similarity
+- 2023_산업공학_졸업프로젝트 규칙 정의
 
 seoul_data_gen.ipynb
-- 연관분석 데이터 생성
+- 2023_산업공학_졸업프로젝트 데이터 생성 코드
