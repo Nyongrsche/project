@@ -2,7 +2,7 @@
 ### 데이터 분석가를 꿈꾸는 한용준의 프로젝트 포트폴리오입니다.
 
 
-1. 2022_금융계량경제학
+1. 2022_금융계량경제학_한용준
     - 2022 교내 시계열 분석 레포트
     - 프로젝트 소개
 
@@ -36,7 +36,7 @@ seoul_django/seoul_web/mysite/templates/mysite/index.html & basket.html & tests.
 - 2023_산업공학_졸업프로젝트 웹 구현
 
 assignment3.py
-- 교내 데이터 베이스 수업 과제
+- 교내 데이터베이스 수업 과제
 
 game_data_analysis.ipynb
 - 2022_게임_데이터분석
